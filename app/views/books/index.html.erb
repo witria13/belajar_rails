@@ -1,0 +1,26 @@
+<h2>DATA BUKU</h2>
+<table border="1">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>About</td>
+			<td>Author</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @books.each do |book| %>
+		<tr>
+			<td><%= book.title %></td>
+			<td><%= book.about %></td>
+			<td><%= book.author.name %></td>
+			<td><%= link_to 'Show', book_path(book)  %>  | <%= link_to 'Edit', edit_book_path(book) %> | <%= link_to 'Delete', book_path(book), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+		</tr>
+		<% end %>
+
+	</tbody>
+</table>
+</br>
+<%= link_to "New Book", new_book_path %>
+</br>
+<%= render 'info', popular_book: 'Belajar Ruby On Rails' %>

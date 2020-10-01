@@ -1,0 +1,35 @@
+<h1>Welcome to rails</h1>
+<%= Time.now %>
+</br>
+<%= 1 + 10 %> 
+
+for(let i = 0; i < 10; i++){
+    document.write("<p>Perulangan ke-" + i + "</p>")
+}
+
+</br>
+<%= @nilai %> </br>
+<%= @variable %> </br>
+</br>
+<% @array.each do |angka| %>
+	<%= angka %>
+</br>
+<% end %>
+</br>
+</br>
+
+Nilai nya adalah : <%= @nilai_user[0] *21 %> </br>
+Nilai nya adalah : <%= 115 + @nilai_user[1] %> </br>
+Nilai nya adalah : <%= 58 + @nilai_user[2] %></br>
+Nilai nya adalah : <%= 77 + @nilai_user[3] %></br>
+Nilai nya adalah : <%= 96 + @nilai_user[4] %></br>
+
+</br>
+
+<a href="/books/index">Ke Books menggunakan a href</a>
+</br>
+<%= link_to "Ke Books dengan rails", {controller: 'books', message: 'activated', message: 'activation' } %> </br>
+<%= params.inspect %>
+</br>
+id 		:<%= @id %></br>
+page 	:<%= @page %>
